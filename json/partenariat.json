@@ -1,0 +1,48 @@
+{
+  "PARTENARIAT AVEC LE CNT": {
+    
+    
+  
+    "INTERNATIONAL": {
+      "PUBLIC": {
+        "Coopération Japonaise": [
+          "JICA",
+          "JICS"
+        ],
+        "Coopération Sud-Africaine": [
+          "SANSA"
+        ]
+      },
+      "PRIVE": {
+        "Entreprises": [
+          "Solafune"
+        ]
+      },
+      "FORUM": {
+      }
+    },
+
+    "NATIONAL": {
+      "PUBLIC": {
+        "Projet de partenariat avec :": [
+          "la Primature ...",
+          "le Ministère de l’Agriculture ...",
+          "le Ministère de l’Energie et Ressources hydrauliques ...",
+          "le Ministère de l’Environnement et du Développement Durable ...",
+          "le Ministère de l’Intérieur et Sécurité ...",
+          "le Ministère des Mines",
+          "le Ministère de la Santé Publique, Hygiène et Prévention ...",
+          "le Ministère de Transport ...",
+          "l’OVG"
+          
+        ]
+
+      },
+      "PRIVE": {
+      },
+      "FORUM": {
+      }
+    }
+  }
+}
+  

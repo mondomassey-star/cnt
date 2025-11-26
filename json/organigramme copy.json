@@ -1,0 +1,181 @@
+{
+  "CONSEIL_D_ADMINISTRATION": {
+    "DIRECTION_GENERALE": {
+      "nom": "DIRECTION GENERALE (DG) et (DGA)",
+      "directeurs": {
+        "DIRECTEUR_GENERAL": {
+          "poste": "Directeur Général (DG)",
+          "nom": "",
+          "email": "",
+          "photo": ""
+        },
+        "DIRECTEUR_GENERAL_ADJOINT": {
+          "poste": "Directeur Général Adjoint (DGA)",
+          "nom": "",
+          "email": "",
+          "photo": ""
+        }
+      },
+      "secretariat": {
+        "nom": "Secrétariat",
+        "telephone": ""
+      },
+      "services_directs": [
+        "Collège des commissionnaires aux comptes"
+      ],
+      "directions": {
+        "DIRECTION_SCIENTIFIQUE": {
+          "nom": "DIRECTION SCIENTIQUE (DS)",
+          "directeur": {
+            "poste": "Directeur Scientifique",
+            "nom": "",
+            "email": "",
+            "photo": ""
+          },
+          "assistant_direction": {
+            "poste": "Assistant de Direction",
+            "telephone": ""
+          },
+          "departements": {
+            "ACQUISITION_PRETRAITEMENT_CARTOGRAPHIE": {
+              "nom": "Departemant Aquisition pré-traitaitement et Cartographie",
+              "services": [
+                "Service Téléchargement & Pré-traitement",
+                "Service Cartographie"
+              ]
+            },
+            "AGRONOMIE_ENVIRONNEMENT": {
+              "nom": "Département Agronomie et Environnement",
+              "services": [
+                "Service Agronomie",
+                "Service Environnement"
+              ]
+            },
+            "ENERGIE_GEOLOGIE_MINES": {
+              "nom": "Département Energie, Géologie et Mines",
+              "services": [
+                "Service Energie",
+                "Service Géologie et Mines"
+              ]
+            }
+          }
+        },
+        "DIRECTION_ADMINISTRATIVE_FINANCIERE": {
+          "nom": "DIRECTION ADMINISTRATIVE ET FINANCIERE (DAF)",
+          "directeur": {
+            "poste": "Directeur Administratif et Financier",
+            "nom": "",
+            "email": "",
+            "photo": ""
+          },
+          "assistant_direction": {
+            "poste": "Assistant de Direction",
+            "telephone": ""
+          },
+          "departements": {
+            "RESSOURCES_HUMAINES": {
+              "nom": "Département Ressources Humaines",
+              "services": [
+                "Service Personnel",
+                "Service Formation",
+                "Service Affaire Sociale Culture",
+                "Service Prospect. Marchés, Appro, Patrimoine & Intendance"
+              ]
+            },
+            "JURIDIQUE": {
+              "nom": "Département Juridique",
+              "services": [
+                "Règlementation",
+                "Contentieux"
+              ]
+            },
+            "MARKETING_COMMUNICATION": {
+              "nom": "Departement Marketing et Communication",
+              "services": [
+                "Service Communication",
+                "Service Marketing",
+                "Service Commercial"
+              ]
+            },
+            "FINANCES_COMPTABILITE": {
+              "nom": "Département Finances & Comptabilité",
+              "services": [
+                "Service Finances",
+                "Service Comptabilité"
+              ]
+            }
+          }
+        },
+        "DIRECTION_TECHNIQUE_OPERATIONS": {
+          "nom": "DIRECTION TECHNIQUE DES OPERATIONS (DTO)",
+          "directeur": {
+            "poste": "Directeur Technique des Opérations",
+            "nom": "",
+            "email": "",
+            "photo": ""
+          },
+          "assistant_direction": {
+            "poste": "Assistant de Direction",
+            "telephone": ""
+          },
+          "departements": {
+            "SATELLITE_SEGMENT_SOL": {
+              "nom": "Département Satellite Segment Sol",
+              "services": [
+                "Service Centre de Gestion Satellite",
+                "Service Centre de Contrôle Satellite",
+                "Service Centre de Réception Satellite",
+                "Service Maintenance site Segment Sol",
+                "Service Formation & Transfert de Technologie"
+              ]
+            },
+            "MAINTENANCE_INFORMATIQUE_LOGISTIQUE": {
+              "nom": "Département Maintenance, Informatique & Logistique",
+              "services": [
+                "Service Informatique",
+                "Service Maintenance Gestion des Outils",
+                "Service Logistique"
+              ]
+            },
+            "INSPECTION_AUTORISATION": {
+              "nom": "Département Inspection & Autorisation",
+              "services": [
+                "Service Inspections",
+                "Service Autorisations"
+              ]
+            }
+          }
+        },
+        "DIRECTION_ETUDE_PLANIFICATION_SUIVI": {
+          "nom": "DIRECTION D'ETUDE, PLANIFICATION ET SUIVI (DEPS)",
+          "directeur": {
+            "poste": "Directeur d'Étude, Planification et Suivi",
+            "nom": "",
+            "email": "",
+            "photo": ""
+          },
+          "assistant_direction": {
+            "poste": "Assistant de Direction",
+            "telephone": ""
+          },
+          "departements": {
+            "ETUDES_PROJETS": {
+              "nom": "Département Etudes & Projets",
+              "services": [
+                "Service Etudes",
+                "Service Projets",
+                "Service de conception et de préparation des protocoles d'accord avec les utilisateurs des produits de télédétection"
+              ]
+            },
+            "PLANIFICATION_STRATEGIQUES": {
+              "nom": "Département Planification Stratégiques",
+              "services": [
+                "Service des Activités Programmées"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

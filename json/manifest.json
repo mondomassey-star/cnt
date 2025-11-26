@@ -1,0 +1,25 @@
+{
+    "name": "Orion Digital",
+    "short_name": "OD",
+    "description": "CNT - RDC",
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#2c313a",
+    "background_color": "#fff",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "\/images\/assets\/pwa-icon-logo.jpg",
+            "sizes": "32x32",
+            "type": "image\/png"
+        }
+    ],
+    "categories": [
+        "business"
+    ],
+    "permissions": [
+        "push"
+    ],
+    "related_applications": [],
+    "prefer_related_applications": false
+}

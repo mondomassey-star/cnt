@@ -1,0 +1,25 @@
+{
+    "name": "XTRA",
+    "short_name": "XTRA",
+    "description": "XTRA WordPress Theme",
+    "start_url": "https:\/\/xtratheme.com\/elementor\/investment",
+    "display": "standalone",
+    "theme_color": "#2c313a",
+    "background_color": "#fff",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "https:\/\/xtratheme.com\/wp-content\/uploads\/2024\/05\/pwa-icon-logo.jpg",
+            "sizes": "512x512",
+            "type": "image\/png"
+        }
+    ],
+    "categories": [
+        "business"
+    ],
+    "permissions": [
+        "push"
+    ],
+    "related_applications": [],
+    "prefer_related_applications": false
+}

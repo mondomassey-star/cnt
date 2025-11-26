@@ -1,0 +1,55 @@
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+    .container1 {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    .header1 {
+      background: linear-gradient(135deg, #3f51b5 0%, #5c6bc0 100%);
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+    .header1 h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    .content1 {
+      padding: 30px;
+    }
+    .org-item1 {
+      border: 1px solid #e3f2fd;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .org-header1 {
+      padding: 15px 20px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+    }
+    .level-0 .org-header { background: #3f51b5; color: #fff; }
+    .level-1 .org-header { background: #5c6bc0; color: #fff; }
+    .level-2 .org-header { background: #e8eaf6; color: #3f51b5; }
+    .org-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+    .org-content.expanded { max-height: 2000px; }
+    .org-children { padding: 10px 20px 20px 30px; }
+    .service-list { background: #fafbff; padding: 10px 15px; border-radius: 8px; border-left: 4px solid #3f51b5; margin: 8px 0; }
+    .service-item { padding: 6px 0; border-bottom: 1px solid #ddd; }
+    .service-item:last-child { border-bottom: none; }
+    .expand-icon { transition: transform 0.3s ease; }
+    .expanded > .org-header .expand-icon { transform: rotate(90deg); }

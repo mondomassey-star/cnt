@@ -1,0 +1,54 @@
+{
+    "Produits et Services": {
+        "Cartographies Thématiques": {
+            "Agriculture et sécurité alimentaire": [
+                "Surveillance des cultures et prévision des rendements",
+                "Gestion des risques agricoles",
+                "Gestion de l'eau pour l'agriculture",
+                "Analyse de la sécurité alimentaire",
+                "Suivi de la biomasse et évaluation de la qualité fourragère",
+                "Détection de la dégradation des pâturages et planification de la rotation et charge animale",
+                "Suivi saisonnier des périodes de pénurie et d’abondance"
+            ],
+            "Gestion des ressources naturelles": [
+                "Exploration minière et d'hydrocarbures",
+                "Surveillance environnementale",
+                "Surveillance des écosystèmes forestiers",
+                "Cartographie des ressources en eau",
+                "Détection et cartographie de la tourbière"
+            ],
+            "Aménagement du territoire": [
+                "Cartographie urbaine et rurale",
+                "Évaluation des risques urbains",
+                "Analyse des transports et du commerce",
+                "Production des données topographiques et bathymétriques" 
+            ]
+        },
+        "Renforcement des capacités": [
+            "Formation et éducation géospatiales",
+            "Développement d'infrastructures de données"
+        ],
+        "Offres de Services Techniques": [
+            "Évaluation des demandes d’autorisation (accès aux données, survols de zones, etc.)",
+            "Inspection périodique des équipements et systèmes de collecte de données",
+            "Contrôle qualité des données produites par les opérateurs ou partenaires",
+            "Vérification du respect des normes environnementales et de sécurité",
+            "Encadrement réglementaire des utilisateurs de la télédétection",
+            "Audits techniques des installations",
+            "Suivi des activités autorisées pour éviter les abus ou les utilisations non conformes",
+            "Appui technique et juridique à la régulation de l’utilisation des images satellites"
+        ],
+        "Autorisations et Agréments": [
+            "Autorisation d’accès aux données satellitaires (images brutes ou traitées)",
+            "Licences d’exploitation de drones à usage scientifique ou civil",
+            "Permis de captation de données géospatiales",
+            "Certificats de conformité pour les équipements utilisés dans les opérations de télédétection"
+        ],
+        "Rapports et Registres de Conformité": [
+            "Rapports d’inspection technique des plateformes de télédétection (drones, stations au sol, etc.)",
+            "Rapports de conformité réglementaire pour les projets en lien avec la télédétection",
+            "Registre des utilisateurs agréés (chercheurs, ONG, entreprises, etc.)"
+        ]
+        
+    }
+}
