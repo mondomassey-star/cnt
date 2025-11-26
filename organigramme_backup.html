@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Organigramme | CNT
+    </title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .xtra-cover-type-title {
+            background: rgba(63, 81, 181, 0.1);
+            min-height: 100px;
+        }
+
+        .page_title {
+            padding: 30px 0;
+        }
+
+        .right_br_full_container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .codevz-section-title {
+            color: #3f51b5;
+            font-size: 2.5em;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        .xtra-mobile-menu-head {
+            display: none;
+        }
+
+        .xtra-mobile-menu-head>a i {
+            font-size: 18px;
+        }
+
+        .sf-menu>.cz.current_menu>a,
+        .sf-menu>.cz .cz.current_menu>a,
+        .sf-menu>.current-menu-parent>a,
+        .sf-menu>.current-menu-item>a {
+            color: #3f51b5;
+        }
+
+        .sf-menu>.cz>a:before,
+        .sf-menu>.cz>a:before {
+            background: #3f51b5;
+        }
+
+        #menu_header_2>.cz>a {
+            color: #333;
+        }
+
+        #menu_header_2>.cz>a:hover,
+        #menu_header_2>.cz:hover>a,
+        #menu_header_2>.cz.current_menu>a,
+        #menu_header_2>.current-menu-parent>a {
+            color: #3f51b5;
+        }
+
+        #menu_header_2>.cz>a:before {
+            background: #3f51b5;
+        }
+
+        #menu_header_2 .cz .sub-menu:not(.cz_megamenu_inner_ul),
+        #menu_header_2 .cz_megamenu_inner_ul .cz_megamenu_inner_ul {
+            background: white;
+        }
+
+        #menu_header_2 .cz .cz a {
+            color: #666;
+        }
+
+        #menu_header_2 .cz .cz a:hover,
+        #menu_header_2 .cz .cz:hover>a,
+        #menu_header_2 .cz .cz.current_menu>a,
+        #menu_header_2 .cz .current_menu>.current_menu {
+            color: #3f51b5;
+        }
+
+        #menu_header_3>.cz>a {
+            color: #333;
+        }
+
+        #menu_header_3>.cz>a:hover,
+        #menu_header_3>.cz:hover>a,
+        #menu_header_3>.cz.current_menu>a,
+        #menu_header_3>.current-menu-parent>a {
+            color: #3f51b5;
+        }
+
+        #menu_header_3>.cz>a:before {
+            background: #3f51b5;
+        }
+
+        #menu_header_3 .cz .sub-menu:not(.cz_megamenu_inner_ul),
+        #menu_header_3 .cz_megamenu_inner_ul .cz_megamenu_inner_ul {
+            background: white;
+        }
+
+        .rtl #menu_header_3 .cz .sub-menu:not(.cz_megamenu_inner_ul),
+        .rtl #menu_header_3 .cz_megamenu_inner_ul .cz_megamenu_inner_ul {
+            right: 0;
+        }
+
+        #menu_header_3 .cz .cz a {
+            color: #666;
+        }
+
+        #menu_header_3 .cz .cz a:hover,
+        #menu_header_3 .cz .cz:hover>a,
+        #menu_header_3 .cz .cz.current_menu>a,
+        #menu_header_3 .cz .current_menu>.current_menu {
+            color: #3f51b5;
+        }
+
+        #menu_header_4 {
+            background: white;
+        }
+
+        #menu_header_4>.cz>a {
+            color: #333;
+        }
+
+        #menu_header_4>.cz>a:hover,
+        #menu_header_4>.cz:hover>a,
+        #menu_header_4>.cz.current_menu>a,
+        #menu_header_4>.current-menu-parent>a {
+            color: #3f51b5;
+        }
+
+        #menu_header_4>.cz>a:before {
+            background: #3f51b5;
+        }
+
+        #menu_header_4 .cz .sub-menu:not(.cz_megamenu_inner_ul),
+        #menu_header_4 .cz_megamenu_inner_ul .cz_megamenu_inner_ul {
+            background: white;
+        }
+
+        .rtl #menu_header_4 .cz .sub-menu:not(.cz_megamenu_inner_ul),
+        .rtl #menu_header_4 .cz_megamenu_inner_ul .cz_megamenu_inner_ul {
+            right: 0;
+        }
+
+        #menu_header_4 .cz .cz a {
+            color: #666;
+        }
+
+        #menu_header_4 .cz .cz a:hover,
+        #menu_header_4 .cz .cz:hover>a,
+        #menu_header_4 .cz .cz.current_menu>a,
+        #menu_header_4 .cz .current_menu>.current_menu {
+            color: #3f51b5;
+        }
+
+        .cz_middle_footer {
+            background: #f8f9fa;
+        }
+
+        .footer_widget {
+            margin-bottom: 30px;
+        }
+
+        .cz_middle_footer a {
+            color: #666;
+        }
+
+        .cz_middle_footer a:hover {
+            color: #3f51b5;
+        }
+
+        .footer_2 {
+            background: #333;
+        }
+
+        .footer_2 .row {
+            padding: 20px 0;
+        }
+
+        .footer_widget>.codevz-widget-title,
+        footer .widget_block>div>div>h2 {
+            color: #3f51b5;
+        }
+
+        #menu_header_3 .sub-menu .sub-menu:not(.cz_megamenu_inner_ul) {
+            left: 100%;
+        }
+
+        .footer_widget>.codevz-widget-title:before,
+        footer .widget_block>div>div>h2:before {
+            background: #3f51b5;
+        }
+
+        #menu_header_3>.cz {
+            margin-right: 30px;
+        }
+
+        .rtl #menu_header_3>.cz {
+            margin-left: 30px;
+            margin-right: 0;
+        }
+
+        .xtra-mobile-menu-text {
+            color: #333;
+        }
+
+        li.xtra-mobile-menu-additional .cz_social a {
+            color: #3f51b5;
+        }
+
+        #menu_header_4 .sub-menu .sub-menu:not(.cz_megamenu_inner_ul) {
+            left: 100%;
+        }
+
+        .rtl #menu_header_4 .sub-menu .sub-menu:not(.cz_megamenu_inner_ul) {
+            right: 100%;
+            left: auto;
+        }
+
+        @media screen and (max-width: 768px) {
+            footer .elms_center,
+            footer .have_center .elms_left,
+            footer .have_center .elms_center,
+            footer .have_center .elms_right {
+                text-align: center !important;
+            }
+
+            .footer_widget>.codevz-widget-title:before,
+            footer .widget_block>div>div>h2:before {
+                display: none;
+            }
+
+            .cz_middle_footer {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body id="intro" class="home wp-singular page-template-default page page-id-5 wp-embed-responsive wp-theme-xtra theme-xtra theme-5.1 codevz-plus-5.1 cz-cpt-post xtra-woo-two-col-mobile cz-outofstock-grayscale  woo-sale-text-percentage cz_menus_dropdown_effect_2 cz_menus_intro_effect_7 cz_sticky clr cz-page-5 woocommerce-no-js elementor-default elementor-kit-941 elementor-page elementor-page-5"
+    data-ajax="https://xtratheme.com/elementor/investment/wp-admin/admin-ajax.php">
+    
+    <div id="layout" class="clr layout_">
+        <div class="inner_layout">
+            <div class="cz_overlay" aria-hidden="true"></div>
+ 
+            <!--About-->
+            <div id="header-container"></div>
+            <script src="wp-includes/js/jquery/load-header.js"></script>
+            <script>
+                loadHeader('2');  // Charge cz_preloader2
+            </script>
+            <!--Fin About-->
+        
+            <div class="page_cover xtra-cover-type-title">
+                <div class="page_title" data-title-parallax="">
+                    <div class="right_br_full_container clr">
+                        <div class="row clr">
+                            <div class="lefter">
+                                <h1 class="codevz-section-title ">Organigramme Intéractif du CNT</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="page_content" class="page_content mt0 mb0" role="main">
+                <div class="row clr">
+                    <div class="s12 clr">
+                        <div class="cz_is_blank clr">
+                            <div class="cz_post_content clr">
+                                <div data-elementor-type="wp-page" data-elementor-id="5" class="elementor elementor-5">
+
+                                    <!--IMPORTANT!!-IMPORTANT!!-IMPORTANT!!-IMPORTANT!!-IMPORTANT!!-->
+                                    <!--Cette section concerne la structure de l'organigramme-->
+                                    <!--Ne rien modifier dans la Structure!! Toute modification est faite dans "json/organigramme.json"-->
+                                    <!-- BACKUP OF ORIGINAL ORGANIGRAMME.HTML -->
+                                    <!-- Content truncated for brevity... -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="footer-container"></div>
+            <script src="wp-includes/js/jquery/load-footer.js"></script>
+            <script>
+                loadFooter('8');  // Charge cz_preloader8
+            </script>
+        </div>
+    </div>
+</body>
+</html>

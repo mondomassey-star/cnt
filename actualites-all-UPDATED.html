@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualités - Centre National de Télédétection</title>
+    <link rel="icon" type="image/x-icon" href="images/assets/logo-cnt-ico.png">
+    
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<style>
+    /* IMPORTANT: ALL CARD PARAMETERS UPDATED WITH LATEST MODIFICATIONS */
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        line-height: 1.6;
+        color: #2c313a;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+    }
+
+    /* Header Content */
+    .header-content {
+        position: relative;
+        text-align: center;
+        padding: 150px 20px 100px;
+        color: #ffffff;
+    }
+
+    .header-title {
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        animation: fadeInUp 0.8s ease-out;
+    }
+
+    .header-subtitle {
+        font-size: 20px;
+        font-weight: 300;
+        opacity: 0.9;
+        margin-bottom: 40px;
+        animation: fadeInUp 0.8s ease-out 0.2s both;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Navigation Tabs */
+    .nav-tabs {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        animation: fadeInUp 0.8s ease-out 0.4s both;
+    }
+
+    .nav-tab {
+        padding: 12px 30px;
+        background: rgba(255, 255, 255, 0.1);
+        color: #e5deda;
+        border: 2px solid rgba(229, 222, 218, 0.3);
+        border-radius: 25px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-weight: 500;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .nav-tab:hover {
+        background: rgba(229, 222, 218, 0.2);
+        border-color: #e5deda;
+        transform: translateY(-2px);
+    }
+
+    .nav-tab.active {
+        background: #e5deda;
+        color: #2c313a;
+        border-color: #e5deda;
+    }
+
+    /* Main Container */
+    .main-container {
+        max-width: 1240px;
+        margin: -40px auto 60px;
+        padding: 0 20px;
+        position: relative;
+        z-index: 2;
+    }
+
+    /* Content Sections */
+    .content-section {
+        display: none;
+        animation: fadeIn 0.5s ease-out;
+    }
+
+    .content-section.active {
+        display: block;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    /* Section Header */
+    .section-header {
+        background: #2c313a;
+        padding: 30px;
+        border-radius: 4px;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .section-icon {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg,#424247  0%, #2c313a 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #e5deda;
+        font-size: 24px;
+    }
+
+    .section-title {
+        font-size: 28px;
+        font-weight: 600;
+        color: #ffffff;
+    }
+
+    .section-description {
+        font-size: 14px;
+        color: rgba(203, 203, 203, 0.7);
+        margin-top: 5px;
+    }
+
+    /* Grid Layouts - UPDATED */
+    .grid-2 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 15px; /* ✅ UPDATED FROM 25px */
+    }
+
+    /* Card Styles - UPDATED */
+    .card {
+        background: #ffffff;
+        border-radius: 4px;
+        overflow: hidden;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .card-content {
+        padding: 18px; /* ✅ UPDATED FROM 25px */
+    }
+
+    .card-meta {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 12px; /* ✅ UPDATED FROM 13px */
+        color: rgba(44, 49, 58, 0.6);
+        margin-bottom: 12px; /* ✅ UPDATED FROM 15px */
+    }
+
+    .card-category {
+        background: #e5deda;
+        color: #2c313a;
+        padding: 4px 12px;
+        border-radius: 3px;
+        font-weight: 500;
+        font-size: 11px;
+    }
+
+    .card-title {
+        font-size: 18px; /* ✅ UPDATED FROM 20px */
+        font-weight: 600;
+        color: #2c313a;
+        margin-bottom: 10px; /* ✅ UPDATED FROM 12px */
+        line-height: 1.4;
+    }
+
+    .card-excerpt {
+        font-size: 13px; /* ✅ UPDATED FROM 14px */
+        color: rgba(44, 49, 58, 0.7);
+        line-height: 1.6;
+        margin-bottom: 12px; /* ✅ UPDATED FROM 15px */
+    }
+
+    .card-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 15px;
+        border-top: 1px solid #f4f4f4;
+    }
+
+    .card-author {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 12px; /* ✅ UPDATED FROM 13px */
+        color: rgba(44, 49, 58, 0.7);
+    }
+
+    .card-author-avatar {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: #e5deda;
+    }
+
+    .card-action {
+        color: #2c313a;
+        font-size: 13px; /* ✅ UPDATED FROM 14px */
+        font-weight: 500;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        transition: all 0.3s ease;
+    }
+
+    .card-action:hover {
+        color: #e5deda;
+        gap: 8px;
+    }
+
+    /* Horizontal Card Layout - COMPLETELY UPDATED */
+    .card-horizontal {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        gap: 15px; /* ✅ ADDED gap property */
+    }
+
+    .card-image-horizontal {
+        width: 25%; /* ✅ UPDATED FROM 35% - SMALLER */
+        height: auto;
+        min-height: 100%;
+        object-fit: cover;
+        order: 2; /* ✅ ADDED - MOVES IMAGE TO RIGHT */
+    }
+
+    .card-horizontal .card-content {
+        width: 75%; /* ✅ UPDATED FROM 65% - LARGER */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        order: 1; /* ✅ ADDED - MOVES CONTENT TO LEFT */
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+        .card-horizontal {
+            flex-direction: column;
+        }
+        
+        .card-image-horizontal {
+            width: 100%;
+            height: 200px;
+            order: 0;
+        }
+        
+        .card-horizontal .card-content {
+            width: 100%;
+            order: 0;
+        }
+    }
+</style>
+
+<body>
+    <div class="header-content">
+        <h1 class="header-title">Actualités</h1>
+        <p class="header-subtitle">Dernières nouvelles et mises à jour du Centre National de Télédétection</p>
+        
+        <div class="nav-tabs">
+            <div class="nav-tab active" onclick="showSection('all')">
+                <i class="fas fa-th-large"></i>
+                Toutes
+            </div>
+            <div class="nav-tab" onclick="showSection('news')">
+                <i class="fas fa-newspaper"></i>
+                Actualités
+            </div>
+            <div class="nav-tab" onclick="showSection('events')">
+                <i class="fas fa-calendar-alt"></i>
+                Événements
+            </div>
+            <div class="nav-tab" onclick="showSection('publications')">
+                <i class="fas fa-file-alt"></i>
+                Publications
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <!-- Section Toutes -->
+        <div id="all-section" class="content-section active">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-th-large"></i>
+                </div>
+                <div>
+                    <h2 class="section-title">Toutes les actualités</h2>
+                    <p class="section-description">Vue d'ensemble de toutes nos actualités, événements et publications</p>
+                </div>
+            </div>
+
+            <!-- UPDATED GRID WITH SMALLER GAPS -->
+            <div class="grid-3">
+                <!-- Horizontal Card Example - Image on RIGHT -->
+                <div class="card card-horizontal">
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-category">Actualité</span>
+                            <span>15 Nov 2024</span>
+                        </div>
+                        <h3 class="card-title">Nouveau partenariat avec SANSA pour le développement spatial</h3>
+                        <p class="card-excerpt">Le CNT annonce un nouveau partenariat stratégique avec l'Agence spatiale sud-africaine pour renforcer les capacités en télédétection...</p>
+                        <div class="card-footer">
+                            <div class="card-author">
+                                <div class="card-author-avatar"></div>
+                                <span>Équipe CNT</span>
+                            </div>
+                            <a href="#" class="card-action">
+                                Lire plus <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <img src="images/news/accord_cnt_sansa.jpg" alt="Partenariat CNT-SANSA" class="card-image-horizontal">
+                </div>
+
+                <!-- Regular Card -->
+                <div class="card">
+                    <img src="images/events/formation-sig.jpg" alt="Formation SIG" class="card-image">
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-category">Formation</span>
+                            <span>10 Nov 2024</span>
+                        </div>
+                        <h3 class="card-title">Formation en Systèmes d'Information Géographique</h3>
+                        <p class="card-excerpt">Session intensive de formation sur les outils SIG modernes et leurs applications dans la télédétection...</p>
+                        <div class="card-footer">
+                            <div class="card-author">
+                                <div class="card-author-avatar"></div>
+                                <span>Dr. Mukendi</span>
+                            </div>
+                            <a href="#" class="card-action">
+                                En savoir plus <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Another Horizontal Card -->
+                <div class="card card-horizontal">
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-category">Publication</span>
+                            <span>8 Nov 2024</span>
+                        </div>
+                        <h3 class="card-title">Étude sur la déforestation en RDC publié</h3>
+                        <p class="card-excerpt">Notre dernière recherche sur l'évolution de la couverture forestière utilisant les données satellites Landsat...</p>
+                        <div class="card-footer">
+                            <div class="card-author">
+                                <div class="card-author-avatar"></div>
+                                <span>Dr. Kabongo</span>
+                            </div>
+                            <a href="#" class="card-action">
+                                Télécharger <i class="fas fa-download"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <img src="images/thematiques/environnement.jpg" alt="Étude déforestation" class="card-image-horizontal">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionName) {
+            // Remove active class from all tabs and sections
+            document.querySelectorAll('.nav-tab').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('.content-section').forEach(section => section.classList.remove('active'));
+            
+            // Add active class to clicked tab
+            event.target.closest('.nav-tab').classList.add('active');
+            
+            // Show corresponding section
+            document.getElementById(sectionName + '-section').classList.add('active');
+        }
+    </script>
+</body>
+</html>
