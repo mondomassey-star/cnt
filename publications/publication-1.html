@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyse Multi-temporelle de la Déforestation en RDC - CNT</title>
+    <style>
+        .publication-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: 'Georgia', serif;
+        }
+        .breadcrumb {
+            margin-bottom: 20px;
+            color: #666;
+        }
+        .breadcrumb a {
+            color: #007cba;
+            text-decoration: none;
+        }
+        .publication-header {
+            background: #f8fafc;
+            padding: 40px;
+            border-left: 5px solid #1e3a8a;
+            margin-bottom: 30px;
+        }
+        .publication-title {
+            font-size: 2.2em;
+            font-weight: bold;
+            color: #1e3a8a;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+        .authors {
+            font-size: 1.1em;
+            color: #374151;
+            margin-bottom: 15px;
+        }
+        .publication-meta {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+        }
+        .meta-label {
+            font-weight: bold;
+            color: #6b7280;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+        .meta-value {
+            color: #374151;
+        }
+        .publication-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            margin-top: 30px;
+        }
+        .main-content {
+            line-height: 1.8;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            color: #1e3a8a;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .abstract {
+            background: #f0f9ff;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            border-left: 4px solid #3b82f6;
+        }
+        .keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        .keyword {
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.9em;
+        }
+        .publication-sidebar {
+            background: #f8fafc;
+            padding: 30px;
+            border-radius: 10px;
+            height: fit-content;
+        }
+        .download-button {
+            width: 100%;
+            background: #dc2626;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .cite-button {
+            width: 100%;
+            background: #059669;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+        .back-button {
+            display: inline-block;
+            background: #1e3a8a;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .metrics {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .metric-item {
+            text-align: center;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+        }
+        .metric-number {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #1e3a8a;
+        }
+        .metric-label {
+            font-size: 0.9em;
+            color: #6b7280;
+        }
+        @media (max-width: 768px) {
+            .publication-content { grid-template-columns: 1fr; }
+            .publication-meta { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="publication-container">
+        <div class="breadcrumb">
+            <a href="../index.html">Accueil</a> > <a href="../publications.html">Publications</a> > Article Scientifique
+        </div>
+        
+        <a href="../publications.html" class="back-button">← Retour aux publications</a>
+        
+        <div class="publication-header">
+            <h1 class="publication-title">Analyse Multi-temporelle de la Déforestation en République Démocratique du Congo par Télédétection Satellite</h1>
+            
+            <div class="authors">
+                <strong>Auteurs:</strong> Dr. Mafa Pedro¹, Prof. Kibula Jacques², Dr. Sarah Mbele¹, Prof. Jean-Pierre Kumba³
+            </div>
+            
+            <div class="publication-meta">
+                <div class="meta-item">
+                    <div class="meta-label">Journal</div>
+                    <div class="meta-value">Revue Africaine de Télédétection</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Année</div>
+                    <div class="meta-value">2024</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Volume</div>
+                    <div class="meta-value">Vol. 15, No. 3</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Pages</div>
+                    <div class="meta-value">145-172</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">DOI</div>
+                    <div class="meta-value">10.1016/j.rat.2024.03.015</div>
+                </div>
+                <div class="meta-item">
+                    <div class="meta-label">Type</div>
+                    <div class="meta-value">Article de recherche</div>
+                </div>
+            </div>
+            
+            <div class="keywords">
+                <div class="keyword">Télédétection</div>
+                <div class="keyword">Déforestation</div>
+                <div class="keyword">RDC</div>
+                <div class="keyword">Landsat</div>
+                <div class="keyword">Analyse temporelle</div>
+            </div>
+        </div>
+        
+        <div class="publication-content">
+            <div class="main-content">
+                <div class="section abstract">
+                    <h2>Résumé</h2>
+                    <p>Cette étude présente une analyse multi-temporelle de la déforestation en République Démocratique du Congo utilisant des données satellitaires Landsat sur une période de 20 ans (2003-2023). L'objectif principal est de quantifier les changements de couverture forestière et d'identifier les principales causes de déforestation dans différentes régions du pays.</p>
+                    
+                    <p>La méthodologie combine des techniques de classification supervisée et d'analyse de séries temporelles pour détecter les changements de couverture forestière. Les résultats révèlent une perte nette de 2.3 millions d'hectares de forêt sur la période d'étude, avec des taux de déforestation variables selon les régions.</p>
+                    
+                    <p>Cette recherche contribue à une meilleure compréhension des dynamiques forestières en RDC et fournit des données essentielles pour l'élaboration de stratégies de conservation.</p>
+                </div>
+                
+                <div class="section">
+                    <h2>Résultats Clés</h2>
+                    <ul>
+                        <li><strong>Perte forestière totale:</strong> 2.3 millions d'hectares (2003-2023)</li>
+                        <li><strong>Taux moyen de déforestation:</strong> 0.23% par an</li>
+                        <li><strong>Régions les plus affectées:</strong> Province de l'Équateur, Bandundu</li>
+                        <li><strong>Principales causes:</strong> Agriculture itinérante (60%), exploitation forestière (25%), expansion urbaine (15%)</li>
+                        <li><strong>Précision de la classification:</strong> 94.2% (Kappa = 0.89)</li>
+                    </ul>
+                </div>
+                
+                <div class="section">
+                    <h2>Méthodologie</h2>
+                    <p>L'étude utilise une approche méthodologique rigoureuse basée sur:</p>
+                    <ul>
+                        <li>Images Landsat TM, ETM+ et OLI (résolution 30m)</li>
+                        <li>Classification supervisée par Maximum de Vraisemblance</li>
+                        <li>Validation par données de terrain et imagerie haute résolution</li>
+                        <li>Analyse de tendance par régression linéaire</li>
+                    </ul>
+                </div>
+                
+                <div class="section">
+                    <h2>Implications et Recommandations</h2>
+                    <p>Les résultats de cette étude soulignent l'urgence de mettre en place des mesures de conservation efficaces. Les recommandations incluent:</p>
+                    <ul>
+                        <li>Renforcement du système de surveillance forestière</li>
+                        <li>Promotion d'alternatives à l'agriculture itinérante</li>
+                        <li>Développement de l'agroforesterie</li>
+                        <li>Amélioration de la gouvernance forestière</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="publication-sidebar">
+                <div class="metrics">
+                    <div class="metric-item">
+                        <div class="metric-number">847</div>
+                        <div class="metric-label">Vues</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-number">23</div>
+                        <div class="metric-label">Citations</div>
+                    </div>
+                </div>
+                
+                <button class="download-button">
+                    📄 Télécharger le PDF
+                </button>
+                
+                <button class="cite-button">📚 Citer cet article</button>
+                
+                <h4>Informations sur les auteurs</h4>
+                <p><strong>¹Centre National de Télédétection (CNT)</strong><br>
+                Kinshasa, RDC</p>
+                
+                <p><strong>²Université de Kinshasa</strong><br>
+                Faculté des Sciences</p>
+                
+                <p><strong>³Institut National pour l'Étude et la Recherche Agronomiques</strong><br>
+                Kinshasa, RDC</p>
+                
+                <h4>Contact</h4>
+                <p>📧 mafa.pedro@cnt.cd<br>
+                📞 +243 81 000 0000</p>
+                
+                <h4>Documents annexes</h4>
+                <ul>
+                    <li><a href="#">📊 Données supplémentaires</a></li>
+                    <li><a href="#">🗺 Cartes en haute résolution</a></li>
+                    <li><a href="#">📈 Graphiques détaillés</a></li>
+                </ul>
+                
+                <h4>Publications similaires</h4>
+                <ul>
+                    <li><a href="../publications.html">Toutes les publications du CNT</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

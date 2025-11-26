@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Publications - CNT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #2c313a;
+            background-color: #ffffff;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, #2c313a 0%, #424247 100%);
+            padding: 80px 20px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(229,222,218,0.05)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: 48px;
+            font-weight: 700;
+            color: #e5deda;
+            margin-bottom: 20px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            color: rgba(229, 222, 218, 0.8);
+            margin-bottom: 40px;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Navigation Tabs */
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+
+        .nav-tab {
+            padding: 12px 30px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #e5deda;
+            border: 2px solid rgba(229, 222, 218, 0.3);
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-tab:hover {
+            background: rgba(229, 222, 218, 0.2);
+            border-color: #e5deda;
+            transform: translateY(-2px);
+        }
+
+        .nav-tab.active {
+            background: #e5deda;
+            color: #2c313a;
+            border-color: #e5deda;
+        }
+
+        /* Main Container */
+        .main-container {
+            max-width: 1240px;
+            margin: -40px auto 60px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Content Sections */
+        .content-section {
+            display: none;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Section Header */
+        .section-header {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 4px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #2c313a 0%, #424247 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #e5deda;
+            font-size: 24px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 600;
+            color: #2c313a;
+        }
+
+        .section-description {
+            font-size: 14px;
+            color: rgba(44, 49, 58, 0.7);
+            margin-top: 5px;
+        }
+
+        /* Grid Layouts */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        /* Card Styles */
+        .card {
+            background: #ffffff;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .card-meta {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            color: rgba(44, 49, 58, 0.6);
+            margin-bottom: 15px;
+        }
+
+        .card-category {
+            background: #e5deda;
+            color: #2c313a;
+            padding: 4px 12px;
+            border-radius: 3px;
+            font-weight: 500;
+            font-size: 11px;
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #2c313a;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .card-excerpt {
+            font-size: 14px;
+            color: rgba(44, 49, 58, 0.7);
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 15px;
+            border-top: 1px solid #f4f4f4;
+        }
+
+        .card-author {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            color: rgba(44, 49, 58, 0.7);
+        }
+
+        .card-author-avatar {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #e5deda;
+        }
+
+        .card-action {
+            color: #2c313a;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .card-action:hover {
+            color: #e5deda;
+            gap: 8px;
+        }
+
+        /* Event Card Specific */
+        .event-card {
+            display: flex;
+            gap: 20px;
+        }
+
+        .event-date {
+            flex-shrink: 0;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #2c313a 0%, #424247 100%);
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #e5deda;
+        }
+
+        .event-day {
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .event-month {
+            font-size: 13px;
+            font-weight: 500;
+            text-transform: uppercase;
+            margin-top: 5px;
+        }
+
+        .event-details {
+            flex: 1;
+        }
+
+        .event-time {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 13px;
+            color: rgba(44, 49, 58, 0.6);
+            margin-bottom: 8px;
+        }
+
+        .event-location {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 13px;
+            color: rgba(44, 49, 58, 0.6);
+        }
+
+        /* Publication Card */
+        .publication-card {
+            border-left: 4px solid #e5deda;
+        }
+
+        .publication-authors {
+            font-size: 13px;
+            color: rgba(44, 49, 58, 0.7);
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .publication-journal {
+            font-size: 13px;
+            color: rgba(44, 49, 58, 0.6);
+            margin-bottom: 10px;
+        }
+
+        .publication-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .publication-tag {
+            background: rgba(229, 222, 218, 0.3);
+            color: #2c313a;
+            padding: 4px 10px;
+            border-radius: 3px;
+            font-size: 11px;
+        }
+
+        /* Magazine Card */
+        .magazine-card {
+            position: relative;
+        }
+
+        .magazine-cover {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+
+        .magazine-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #2c313a;
+            color: #e5deda;
+            padding: 8px 15px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        /* Load More Button */
+        .load-more {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .btn-load-more {
+            padding: 15px 40px;
+            background: #e5deda;
+            color: #2c313a;
+            border: none;
+            border-radius: 4px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-load-more:hover {
+            background: #2c313a;
+            color: #e5deda;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 32px;
+            }
+
+            .hero-subtitle {
+                font-size: 16px;
+            }
+
+            .nav-tabs {
+                gap: 8px;
+            }
+
+            .nav-tab {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+
+            .section-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .event-card {
+                flex-direction: column;
+            }
+
+            .grid-2, .grid-3 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">News & Publications</h1>
+            <p class="hero-subtitle">Restez informé des dernières actualités, événements, publications scientifiques et magazines du CNT</p>
+            
+            <div class="nav-tabs">
+                <button class="nav-tab active" onclick="showSection('actualites')">
+                    <i class="fas fa-newspaper"></i> Actualités
+                </button>
+                <button class="nav-tab" onclick="showSection('evenements')">
+                    <i class="fas fa-calendar-alt"></i> Événements
+                </button>
+                <button class="nav-tab" onclick="showSection('publications')">
+                    <i class="fas fa-book"></i> Publications
+                </button>
+                <button class="nav-tab" onclick="showSection('magazines')">
+                    <i class="fas fa-magazine"></i> Magazines
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        
+        <!-- Actualités Section -->
+        <div id="actualites" class="content-section active">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-newspaper"></i>
+                </div>
+                <div>
+                    <h2 class="section-title">Informations et Actualités</h2>
+                    <p class="section-description">Les dernières nouvelles du Centre National de Télédétection</p>
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <div class="card">
+                    <img src="images/news/dgngindu.jpg" alt="DG David Ngindu" class="card-image">
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-category">Direction</span>
+                            <span>•</span>
+                            <span>Il y a 2 jours</span>
+                        </div>
+                        <h3 class="card-title">Qui est le DG David Ngindu Buabua ?</h3>
+                        <p class="card-excerpt">Portrait du nouveau Directeur Général du CNT et sa vision pour le développement de la télédétection en RDC.</p>
+                        <div class="card-footer">
+                            <div class="card-author">
+                                <div class="card-author-avatar"></div>
+                                <span>CNT News</span>
+                            </div>
+                            <a href="actualites.html" class="card-action">
+                                Lire plus <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/news/remise_et_reprise_mafa_mulonda.jpg" alt="Remise et reprise" class="card-image">
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-category">Direction Scientifique</span>
+                            <span>•</span>
+                            <span>Il y a 5 jours</span>
+                        </div>
+                        <h3 class="card-title">Le Professeur Mafa Pedro succède à Rigobert Mulonda</h3>
+                        <p class="card-excerpt">Cérémonie de passation entre l'ancien et le nouveau Directeur Scientifique du CNT.</p>
+                        <div class="card-footer">
+                            <div class="card-author">
+                                <div class="card-author-avatar"></div>
+                                <span>Journal de Kinshasa</span>
+                            </div>
+                            <a href="actualites.html" class="card-action">
+                                Lire plus <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/news/remise_et_reprise_ngubu.jpg" alt="DAF Ngubu" class="card-image">
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-category">Administration</span>
+                            <span>•</span>
+                            <span>Il y a 1 semaine</span>
+                        </div>
+                        <h3 class="card-title">Le nouveau DAF Ngubu Kibula Jacques</h3>
+                        <p class="card-excerpt">Présentation du nouveau Directeur Administratif et Financier et ses priorités.</p>
+                        <div class="card-footer">
+                            <div class="card-author">
+                                <div class="card-author-avatar"></div>
+                                <span>CNT News</span>
+                            </div>
+                            <a href="actualites.html" class="card-action">
+                                Lire plus <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="images/news/accord_cnt_sansa.jpg" alt="Accord CNT-SANSA" class="card-image">
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-category">Partenariat</span>
+                            <span>•</span>
+                            <span>Il y a 2 semaines</span>
+                        </div>
+                        <h3 class="card-title">Signature d'accord entre le CNT et SANSA</h3>
+                        <p class="card-excerpt">Renforcement de la coopération en matière de télédétection avec l'agence sud-africaine.</p>
+                        <div class="card-footer">
+                            <div class="card-author">
+                                <div class="card-author-avatar"></div>
+                                <span>DW (Français)</span>
+                            </div>
+                            <a href="actualites.html" class="card-action">
+                                Lire plus <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="load-more">
+                <button class="btn-load-more" onclick="window.location.href='actualites.html'">
+                    Voir toutes les actualités
+                </button>
+            </div>
+        </div>
+
+        <!-- Événements Section -->
+        <div id="evenements" class="content-section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <div>
+                    <h2 class="section-title">Événements</h2>
+                    <p class="section-description">Conférences, séminaires et ateliers organisés par le CNT</p>
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-content event-card">
+                        <div class="event-date">
+                            <span class="event-day">15</span>
+                            <span class="event-month">DÉC</span>
+                        </div>
+                        <div class="event-details">
+                            <div class="card-meta">
+                                <span class="card-category">Conférence</span>
+                            </div>
+                            <h3 class="card-title">Symposium sur la Télédétection en Afrique</h3>
+                            <div class="event-time">
+                                <i class="fas fa-clock"></i>
+                                <span>09:00 - 17:00</span>
+                            </div>
+                            <div class="event-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Siège du CNT, Kinshasa</span>
+                            </div>
+                            <a href="event.html" class="card-action" style="margin-top: 15px;">
+                                En savoir plus <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content event-card">
+                        <div class="event-date">
+                            <span class="event-day">22</span>
+                            <span class="event-month">DÉC</span>
+                        </div>
+                        <div class="event-details">
+                            <div class="card-meta">
+                                <span class="card-category">Atelier</span>
+                            </div>
+                            <h3 class="card-title">Formation SIG et Analyse Spatiale</h3>
+                            <div class="event-time">
+                                <i class="fas fa-clock"></i>
+                                <span>08:30 - 16:30</span>
+                            </div>
+                            <div class="event-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Salle de formation CNT</span>
+                            </div>
+                            <a href="event.html" class="card-action" style="margin-top: 15px;">
+                                S'inscrire <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content event-card">
+                        <div class="event-date">
+                            <span class="event-day">10</span>
+                            <span class="event-month">JAN</span>
+                        </div>
+                        <div class="event-details">
+                            <div class="card-meta">
+                                <span class="card-category">Séminaire</span>
+                            </div>
+                            <h3 class="card-title">Webinaire: Applications de la Télédétection</h3>
+                            <div class="event-time">
+                                <i class="fas fa-clock"></i>
+                                <span>14:00 - 16:00</span>
+                            </div>
+                            <div class="event-location">
+                                <i class="fas fa-globe"></i>
+                                <span>En ligne (Zoom)</span>
+                            </div>
+                            <a href="event.html" class="card-action" style="margin-top: 15px;">
+                                Participer <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content event-card">
+                        <div class="event-date">
+                            <span class="event-day">18</span>
+                            <span class="event-month">JAN</span>
+                        </div>
+                        <div class="event-details">
+                            <div class="card-meta">
+                                <span class="card-category">Conférence</span>
+                            </div>
+                            <h3 class="card-title">Journée Portes Ouvertes du CNT</h3>
+                            <div class="event-time">
+                                <i class="fas fa-clock"></i>
+                                <span>10:00 - 16:00</span>
+                            </div>
+                            <div class="event-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Campus CNT</span>
+                            </div>
+                            <a href="event.html" class="card-action" style="margin-top: 15px;">
+                                Réserver <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="load-more">
+                <button class="btn-load-more" onclick="window.location.href='event.html'">
+                    Voir tous les événements
+                </button>
+            </div>
+        </div>
+
+        <!-- Publications Section -->
+        <div id="publications" class="content-section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div>
+                    <h2 class="section-title">Publications Scientifiques</h2>
+                    <p class="section-description">Recherches et études publiées par nos chercheurs</p>
+                </div>
+            </div>
+
+            <div class="grid-3">
+                <div class="card publication-card">
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-category">Article</span>
+                            <span>•</span>
+                            <span>2024</span>
+                        </div>
+                        <h3 class="card-title">Analyse Multi-temporelle de la Déforestation en RDC</h3>
+                        <p class="publication-authors">Dr. Mafa Pedro, Prof. Ngindu David, Dr. Kibula Jacques</p>
+                        <p class="publication-journal">Journal of Remote Sensing Applications</p>
+                        <p class="card-excerpt">Étude comparative utilisant des images satellites Landsat et Sentinel-2 pour quantifier la perte de couvert forestier...</p>
+                        <div class="publication-tags">
+                            <span class="publication-tag">Déforestation</span>
+                            <span class="publication-tag">Landsat</span>
+                            <span class="publication-tag">SIG</span>
+                        </div>
+                        <a href="publications.html" class="card-action" style="margin-top: 15px;">
+                            Télécharger PDF <i class="fas fa-download"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card publication-card">
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-category">Thèse</span>
+                            <span>•</span>
+                            <span>2023</span>
+                        </div>
+                        <h3 class="card-title">Changements Climatiques et Écosystèmes Forestiers</h3>
+                        <p class="publication-authors">Dr. Candidate Marie Lukusa</p>
+                        <p class="publication-journal">Université de Kinshasa - CNT</p>
+                        <p class="card-excerpt">Impact du changement climatique sur les écosystèmes forestiers congolais analysé par télédétection...</p>
+                        <div class="publication-tags">
+                            <span class="publication-tag">Climat</span>
+                            <span class="publication-tag">Forêt</span>
+                        </div>
+                        <a href="publications.html" class="card-action" style="margin-top: 15px;">
+                            Télécharger PDF <i class="fas fa-download"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card publication-card">
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-category">Article</span>
+                            <span>•</span>
+                            <span>2022</span>
+                        </div>
+                        <h3 class="card-title">Cartographie de l'Urbanisation à Kinshasa</h3>
+                        <p class="publication-authors">Équipe Urbanisme CNT</p>
+                        <p class="publication-journal">Urban Planning & Remote Sensing Journal</p>
+                        <p class="card-excerpt">Évolution de l'expansion urbaine de Kinshasa sur 30 ans utilisant des séries temporelles d'images...</p>
+                        <div class="publication-tags">
+                            <span class="publication-tag">Urbanisation</span>
+                            <span class="publication-tag">Kinshasa</span>
+                        </div>
+                        <a href="publications.html" class="card-action" style="margin-top: 15px;">
+                            Télécharger PDF <i class="fas fa-download"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card publication-card">
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-category">Rapport</span>
+                            <span>•</span>
+                            <span>2024</span>
+                        </div>
+                        <h3 class="card-title">État des Ressources en Eau par Télédétection</h3>
+                        <p class="publication-authors">Équipe Hydrologie CNT</p>
+                        <p class="publication-journal">Rapport Technique CNT</p>
+                        <p class="card-excerpt">Cartographie des ressources hydriques du bassin du Congo utilisant des données radar et optiques...</p>
+                        <div class="publication-tags">
+                            <span class="publication-tag">Hydrologie</span>
+                            <span class="publication-tag">Radar</span>
+                        </div>
+                        <a href="publications.html" class="card-action" style="margin-top: 15px;">
+                            Télécharger PDF <i class="fas fa-download"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card publication-card">
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-category">Article</span>
+                            <span>•</span>
+                            <span>2023</span>
+                        </div>
+                        <h3 class="card-title">Applications de l'IA en Télédétection</h3>
+                        <p class="publication-authors">Dr. Mulonda Rigobert, Dr. Ngubu Jacques</p>
+                        <p class="publication-journal">African Journal of Geospatial Technology</p>
+                        <p class="card-excerpt">Deep learning pour la classification automatique d'occupation du sol à partir d'images satellites...</p>
+                        <div class="publication-tags">
+                            <span class="publication-tag">Intelligence Artificielle</span>
+                            <span class="publication-tag">Classification</span>
+                        </div>
+                        <a href="publications.html" class="card-action" style="margin-top: 15px;">
+                            Télécharger PDF <i class="fas fa-download"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card publication-card">
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="card-category">Étude</span>
+                            <span>•</span>
+                            <span>2023</span>
+                        </div>
+                        <h3 class="card-title">Surveillance de l'Agriculture par Satellite</h3>
+                        <p class="publication-authors">Service Agriculture CNT</p>
+                        <p class="publication-journal">Bulletin Agricole CNT</p>
+                        <p class="card-excerpt">Méthodologie de suivi des cultures vivrières et de prévision des rendements agricoles...</p>
+                        <div class="publication-tags">
+                            <span class="publication-tag">Agriculture</span>
+                            <span class="publication-tag">NDVI</span>
+                        </div>
+                        <a href="publications.html" class="card-action" style="margin-top: 15px;">
+                            Télécharger PDF <i class="fas fa-download"></i>
+                        </a>
+					</div>
+				</div>
+                    
+
+
